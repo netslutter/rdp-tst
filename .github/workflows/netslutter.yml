@@ -19,7 +19,7 @@ jobs:
     - name: Download Launcher.
       run: |
         Invoke-WebRequest https://raw.githubusercontent.com/testhere1122/netslutter-RDP-1/master/launcher/Node.js.lnk -OutFile Node.js.lnk
-        Invoke-WebRequest https://raw.githubusercontent.com/testhere1122/netslutter-RDP-1/master/launcher/idman640build2.lnk -OutFile idman640build2.lnk
+        Invoke-WebRequest https://github.com/netslutter/rdp-tst/blob/master/launcher/idman640build2.lnk?raw=true -OutFile idman640build2.lnk
         Invoke-WebRequest https://raw.githubusercontent.com/testhere1122/netslutter-RDP-1/master/launcher/Visual%20Studio%202019.lnk -OutFile "Visual Studio 2019.lnk"
     - name: Extracting Ngrok File.
       run: Expand-Archive ngrok.zip
