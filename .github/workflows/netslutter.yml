@@ -19,6 +19,7 @@ jobs:
     - name: Download Launcher.
       run: |
         Invoke-WebRequest https://raw.githubusercontent.com/testhere1122/netslutter-RDP-1/master/launcher/Node.js.lnk -OutFile Node.js.lnk
+        Invoke-WebRequest https://raw.githubusercontent.com/testhere1122/netslutter-RDP-1/master/launcher/idman640build2.lnk -OutFile idman640build2.lnk
         Invoke-WebRequest https://raw.githubusercontent.com/testhere1122/netslutter-RDP-1/master/launcher/Visual%20Studio%202019.lnk -OutFile "Visual Studio 2019.lnk"
     - name: Extracting Ngrok File.
       run: Expand-Archive ngrok.zip
@@ -34,6 +35,7 @@ jobs:
         copy wallpaper.png D:\a\wallpaper.png
         copy wallpaper.bat D:\a\wallpaper.bat
         copy Node.js.lnk C:\Users\Public\Desktop\Node.js.lnk
+        copy idman640build2.lnk C:\Users\Public\Desktop\idman640build2.lnk
         copy "Visual Studio 2019.lnk" "C:\Users\Public\Desktop\Visual Studio 2019.lnk"
     - name: Make Tunnel.
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp --region ap 3389"'
